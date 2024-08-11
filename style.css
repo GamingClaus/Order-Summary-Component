@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+*,*::before,*::after{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(images/pattern-background-desktop.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: hsl(225, 100%, 94%);
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.purchase-card{
+    background-color:hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    border-radius: 1rem;
+    max-width: 100%;
+    align-items: center;
+}
+
+.purchase-card__image{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+
+.purchase-card__description{
+    text-align: center;
+    padding: 2rem 2rem 1rem 2rem;
+}
+
+.purchase-card__description__header{
+    color:hsl(223, 47%, 23%);
+    font-weight: 900;
+}
+
+.purchase-card__description__paragraph{
+    color: hsl(224, 23%, 55%);
+    padding: 1rem 0rem 0rem 0rem;
+}
+
+.purchase-card__payment-plan{
+    display: flex;
+    align-items: center;
+    background: hsl(225, 100%, 98%);
+    justify-content: space-between;
+    width: 20rem;
+    padding: 1.1rem 0rem;
+    border-radius: 0.4rem;
+    margin: 0rem 0rem 1.8rem 0rem;
+}
+
+.purchase-card__payment-plan__image{
+        padding-left: 1rem;
+}
+
+.purchase-card__payment-plan__payment-time{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+    margin-right: 3.5rem;
+}
+
+.purchase-card__payment-plan__payment-amount{
+    font-size: 0.9rem;
+    color:  hsl(224, 23%, 55%);
+    font-weight: 500;
+}
+
+.purchase-card__payment-plan__change{
+    text-decoration: underline;
+    color: hsl(245, 75%, 52%);
+    font-weight: 700;
+    margin-right: 1.2rem;
+}
+
+.purchase-card__payment-plan__change:hover{
+    text-decoration: none;
+    filter: opacity(80%);
+}
+
+.purchase-card__order-options{
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.purchase-card__order-options--accept{
+    background-color:  hsl(245, 75%, 52%);
+    color:hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.9rem 0rem;
+    border: none;
+    border-radius: 0.4rem;
+    text-align: center;
+    box-shadow: 1px 9px 20px 0px  hsl(224, 23%, 55%);
+}
+
+.purchase-card__order-options--accept:hover{
+    cursor: pointer;
+    filter: opacity(80%);
+}
+
+.purchase-card__order-options--cancel{
+    background-color:  hsla(245, 75%, 52%, 0);
+    color: hsl(224, 23%, 55%);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1rem 0rem;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+    align-self: center;
+}
+
+.purchase-card__order-options--cancel:hover{
+    color:hsl(223, 47%, 23%);
+    font-weight: 900;
+}
+
+@media (max-width:375px) {
+  
+    body{
+        background:url(images/pattern-background-mobile.svg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .purchase-card{
+        background-color:hsl(0, 0%, 100%);
+        display: flex;
+        flex-direction: column;
+        width: 21rem;
+        border-radius: 1rem;
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .purchase-card__description {
+        text-align: center;
+        padding: 2rem 3rem 1rem 3rem;
+    }
+
+    .purchase-card__payment-plan {
+        display: flex;
+        align-items: center;
+        background: hsl(225, 100%, 98%);
+        justify-content: space-between;
+        width: 18rem;
+        padding: 1.1rem 0rem;
+        border-radius: 0.4rem;
+        max-width: 100%;
+        overflow-wrap:anywhere;
+    }
+
+    .purchase-card__payment-plan__payment-time{
+        margin-right: 1rem;
+    }
+
+    .purchase-card__payment-plan__change{
+        margin: 0.5rem;
+    }
+    
+    .purchase-card__order-options{
+        max-width: 100%;
+    }
+
+    .purchase-card__order-options--accept {
+        background-color: hsl(245, 75%, 52%);
+        color: hsl(0, 0%, 100%);
+        font-weight: 700;
+        font-size: 1rem;
+        border: none;
+        border-radius: 0.4rem;
+        width: 18rem;
+        align-self: center;
+        max-width: 100%;
+    }
+
+    .purchase-card__order-options--cancel{
+        padding: 0.5rem 0rem;
+        margin: 0rem 0rem 1.5rem 0rem;
+    }
+}
